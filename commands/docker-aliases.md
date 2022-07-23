@@ -1,32 +1,21 @@
-# Variuos unix alias helpers
-
-### Docker, compose and swarm commands
-
-Copy to newly created directory
-
-```bash
-mkdir -p ~/.bashrc.d/ && \
-rm -rf ~/.bashrc.d/*.bashrc && \
-cp -r ./alias/*.bashrc ~/.bashrc.d/
-
-```
+## Docker, compose and swarm commands
 
 Add alias to preffered terminal
 ```bash
-export ALIAS_HELPER_DIR=~/.bashrc.d/
+alias_helper_dir="~/.bashrc.d"
 cat >> ~/.bashrc << EOF
 ## Docker, docker compose and docker stack commands
-[[ -f $ALIAS_HELPER_DIR/docker-shared.bashrc ]] && . $ALIAS_HELPER_DIR/docker-shared.bashrc
-[[ -f $ALIAS_HELPER_DIR/docker.bashrc ]] && . $ALIAS_HELPER_DIR/docker.bashrc
-[[ -f $ALIAS_HELPER_DIR/docker-compose.bashrc ]] && . $ALIAS_HELPER_DIR/docker-compose.bashrc
-[[ -f $ALIAS_HELPER_DIR/docker-stack.bashrc ]] && . $ALIAS_HELPER_DIR/docker-stack.bashrc
+[[ -f $alias_helper_dir/docker-shared.bashrc ]] && . $alias_helper_dir/docker-shared.bashrc
+[[ -f $alias_helper_dir/docker.bashrc ]] && . $alias_helper_dir/docker.bashrc
+[[ -f $alias_helper_dir/docker-compose.bashrc ]] && . $alias_helper_dir/docker-compose.bashrc
+[[ -f $alias_helper_dir/docker-stack.bashrc ]] && . $alias_helper_dir/docker-stack.bashrc
 EOF
 ```
 
 ## Docker command aliases
 
-|      #SN     |  Command  |Descriptions|    Usage   |
-|--------------|-----------|------------|------------|
+|      #SN     |  Command  | Description |    Usage   |
+|--------------|-----------|-------------|------------|
 | 1 | dexec | Run a command in a running container | Usage:  dexec [OPTIONS] CONTAINER COMMAND [ARG...]|
 | 2 | di| Return low-level information on Docker objects | Usage:  di [OPTIONS] NAME|ID [NAME|ID...]|
 | 3 | dim | List docker images | Usage:  dim [OPTIONS] [REPOSITORY[:TAG]] |

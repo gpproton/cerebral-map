@@ -1,8 +1,14 @@
+## General unix command aliases
+
 Add alias to preffered terminal
 ```bash
-export ALIAS_HELPER_DIR=~/.bashrc.d/
+alias_helper_dir="~/.bashrc.d"
 cat >> ~/.bashrc << EOF
 ## Docker, docker compose and docker stack commands
-[[ -f $ALIAS_HELPER_DIR/general.bashrc ]] && . $ALIAS_HELPER_DIR/general.bashrc
+[[ -f $alias_helper_dir/general.bashrc ]] && . $alias_helper_dir/general.bashrc
 EOF
 ```
+
+|      #SN     |  Command  | Description |    Usage   |
+|--------------|-----------|-------------|------------|
+| 1 | | | |
