@@ -16,8 +16,6 @@ Add alias to preffered terminal
 export ALIAS_HELPER_DIR=~/.bashrc.d/
 cat >> ~/.bashrc << EOF
 ## Docker, docker compose and docker stack commands
-[[ -f $ALIAS_HELPER_DIR/general.bashrc ]] && . $ALIAS_HELPER_DIR/general.bashrc
-[[ -f $ALIAS_HELPER_DIR/system.bashrc ]] && . $ALIAS_HELPER_DIR/system.bashrc
 [[ -f $ALIAS_HELPER_DIR/docker-shared.bashrc ]] && . $ALIAS_HELPER_DIR/docker-shared.bashrc
 [[ -f $ALIAS_HELPER_DIR/docker.bashrc ]] && . $ALIAS_HELPER_DIR/docker.bashrc
 [[ -f $ALIAS_HELPER_DIR/docker-compose.bashrc ]] && . $ALIAS_HELPER_DIR/docker-compose.bashrc
